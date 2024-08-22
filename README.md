@@ -32,3 +32,5 @@ http://[hostname]:8080
     # 비밀번호
     password: 1234
 ~~~
+
+
