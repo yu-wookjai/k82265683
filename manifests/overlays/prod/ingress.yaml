@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jihye0909-ingress
+spec:
+  ingressClassName: ingress-internal
+  rules:
+  - host: jihye0909-82058454.cepg-aa.kubepia.net
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: my-jihye0909
+            port:
+              number: 8080
+        pathType: Prefix
