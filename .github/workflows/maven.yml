@@ -12,7 +12,7 @@ on:
   workflow_dispatch
 
 env:
-  IMAGE_NAME: jihye0909
+  IMAGE_NAME: 82058454
   
 jobs:
   build:
