@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jihye0909
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jihye0909
+  template:
+    metadata:
+      labels:
+        app: jihye0909 
+    spec:
+      containers:
+        - name: jihye0909 
+          image: ceappacr.azurecr.io/82058454
+          ports:
+          - containerPort: 8080

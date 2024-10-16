@@ -1,0 +1,32 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jihye0909
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: jihye0909 
+          command: ["java","-jar","/app.jar"]
+          args: ["--spring.config.location=file:/config/application.yml"]
+          volumeMounts:
+          - mountPath: /mnt/jihye0909
+            name: jihye0909-volume
+            readOnly: false
+            subPath: jihye0909
+          - mountPath: /config
+            name: application-properties
+            readOnly: true
+                          
+      volumes:
+      - name: jihye0909-volume
+        persistentVolumeClaim:
+          claimName: cepg-aa-std-pvc
+      - name: application-properties
+        configMap:
+          name: jihye0909-configmap
+          items:
+            - key: application.yml
+              path: application.yml
+          defaultMode: 420
