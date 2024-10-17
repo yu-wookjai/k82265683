@@ -22,7 +22,7 @@ spec:
       volumes:
       - name: jihye0909-volume
         persistentVolumeClaim:
-          claimName: cepg-aa-std-pvc
+          claimName: ce-aa-pvc
       - name: application-properties
         configMap:
           name: jihye0909-configmap
