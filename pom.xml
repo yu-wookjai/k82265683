@@ -34,14 +34,14 @@
 	<repositories>
 		<repository>
 		<id>github</id>
-		<url>https://maven.pkg.github.com/yu-wookjai/82265683</url>
+		<url>https://maven.pkg.github.com/yu-wookjai/k82265683</url>
 		</repository>
 	</repositories>
 	<distributionManagement>
 		<repository>
 		<id>github</id>
-		<name>GitHub 82265683 Apache Maven Packages</name>
-		<url>https://maven.pkg.github.com/yu-wookjai/82265683</url>
+		<name>GitHub 82265684 Apache Maven Packages</name>
+		<url>https://maven.pkg.github.com/yu-wookjai/k82265683</url>
 		</repository>
 	</distributionManagement>
 
