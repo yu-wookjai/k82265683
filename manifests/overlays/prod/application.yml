@@ -31,4 +31,4 @@ management:
         include: "*"
 
 pvc:
-  path: /mnt/template-for-aa
+  path: /mnt/k82265683
