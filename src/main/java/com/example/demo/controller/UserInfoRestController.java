@@ -31,7 +31,7 @@ public class UserInfoRestController {
      */
     @GetMapping
     public ResponseEntity<?> getDefaultID() {
-        return ResponseEntity.ok("k82265684");
+        return ResponseEntity.ok("82265683");
     }
 
     /**
