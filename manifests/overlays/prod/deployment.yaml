@@ -1,0 +1,32 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "k82265683"
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: "k82265683" 
+          command: ["java","-jar","/app.jar"]
+          args: ["--spring.config.location=file:/config/application.yml"]
+          volumeMounts:
+          - mountPath: /mnt/template-for-aa
+            name: "k82265683-volume"
+            readOnly: false
+            subPath: template-for-aa
+          - mountPath: /config
+            name: application-properties
+            readOnly: true
+                          
+      volumes:
+      - name: "k82265683-volume"
+        persistentVolumeClaim:
+          claimName: ce-aa-std-pvc
+      - name: application-properties
+        configMap:
+          name: "k82265683-configmap"
+          items:
+            - key: application.yml
+              path: application.yml
+          defaultMode: 420
