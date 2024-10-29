@@ -31,4 +31,4 @@ management:
         include: "*"
 
 pvc:
-  path: /mnt/k82265683
+  path: /mnt/k822656831
