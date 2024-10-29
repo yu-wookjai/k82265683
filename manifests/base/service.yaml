@@ -6,4 +6,4 @@ spec:
     ports:
     - port: 8080 
     selector:
-        app: "82265683"
+        app: "k82265683"
